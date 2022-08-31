@@ -28,6 +28,26 @@ class Song
   end
 
   def Song.genre_count
-    
+    a = {}
+    @@genres.each do |gen|
+      if a[gen] == nil
+        a[gen] = 1
+      else 
+        a[gen] += 1
+      end
+    end
+    return a
+  end
+
+  def Song.artist_count
+    a = {}
+    @@artists.each do |art|
+      if a[art] == nil
+        a[art] = 1
+      else 
+        a[art] += 1
+      end
+    end
+    return a
   end
 end
